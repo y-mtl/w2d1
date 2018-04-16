@@ -10,11 +10,7 @@ module.exports = function getHTML (options, callback) {
       for (val of chunk) {
         html += val;
       }
-      printHTML(html);
+      callback(html);
     });
   });
 };
-
-function printHTML (html) {
-  console.log(html);
-}
